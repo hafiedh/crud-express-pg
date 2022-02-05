@@ -3,7 +3,7 @@ const { instructorModel } = require("../model");
 class InstructorController {
   static getInstructor(req, res) {
     const result = instructorModel.getInstructor();
-    res.status(200).json(result);
+    res.render("instructor", { data: result });
     return;
   }
 
@@ -14,8 +14,9 @@ class InstructorController {
     return;
   }
 
-  static viewInstructor(req, res) {
-    res.render("instructor");
+  static redirect(req, res) {
+    res.redirect("/peserta");
+    return;
   }
 }
 

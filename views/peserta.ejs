@@ -8,9 +8,9 @@
   </head>
   <body>
     <h1>INI PESERTA</h1>
-    <% for (var i = 0; i < peserta.length; i++) { %>
-    <h2><%= peserta[i].nama %></h2>
-    <p><%= peserta[i].umur %></p>
+    <% for (let i = 0; i < peserta.length; i++) { %>
+    <h2>Name: <%= peserta[i].nama %></h2>
+    <p>Age : <%= peserta[i].umur %></p>
     <% } %>
   </body>
 </html>

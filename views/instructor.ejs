@@ -7,6 +7,15 @@
     <title>Home Page</title>
   </head>
   <body>
-    <h1>INI INSTRUCTOR</h1>
+    <h1>INI INSTRUCTORNYA:</h1>
+    <% for (let i = 0; i < data.length; i++) { %>
+    <h2>Name: <%= data[i].nama %></h2>
+    <p>Age : <%= data[i].umur %></p>
+    <p>Keahlihan:<%= data[i].keahlian %></p>
+    <% } %>
+
+    <form action="instructor/redirect" method="post">
+      <input type="submit" id="redirect" value="redirect" />
+    </form>
   </body>
 </html>
