@@ -13,8 +13,9 @@ class InstructorController {
     res.status(200).json(result);
     return;
   }
-  static getInstructorView(req, res) {
-    // gua taro github guys
+
+  static viewInstructor(req, res) {
+    res.render("instructor");
   }
 }
 

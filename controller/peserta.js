@@ -4,7 +4,7 @@ class PesertaController {
   static getPeserta(req, res) {
     const result = pesertaModel.getPeserta();
     console.log(result);
-    res.status(200).json(result);
+    res.render("peserta", { peserta: result });
     return;
   }
 
