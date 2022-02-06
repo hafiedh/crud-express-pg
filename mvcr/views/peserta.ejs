@@ -12,5 +12,12 @@
     <h2>Name: <%= peserta[i].nama %></h2>
     <p>Age : <%= peserta[i].umur %></p>
     <% } %>
+    <form action="peserta/redirect" method="post">
+      <input
+        type="submit"
+        id="redirect-peserta"
+        value="redirect to instructor"
+      />
+    </form>
   </body>
 </html>

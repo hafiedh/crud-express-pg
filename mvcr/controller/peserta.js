@@ -14,6 +14,11 @@ class PesertaController {
     res.status(200).json(result);
     return;
   }
+
+  static redirect(req, res) {
+    res.redirect("/instructor");
+    return;
+  }
 }
 
 module.exports = PesertaController;
