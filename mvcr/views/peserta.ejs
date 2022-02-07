@@ -1,23 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>INI PESERTA</h1>
+<%- include('./components/head') %> <%- include('./components/navbar') %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col text-center">No.</th>
+      <th scope="col text-center">Name</th>
+      <th scope="col text-center">Age</th>
+    </tr>
+  </thead>
+  <tbody>
     <% for (let i = 0; i < peserta.length; i++) { %>
-    <h2>Name: <%= peserta[i].nama %></h2>
-    <p>Age : <%= peserta[i].umur %></p>
+    <tr>
+      <th scope="row"><%= i + 1 %></th>
+      <td><%= peserta[i].nama %></td>
+      <td><%= peserta[i].umur %></td>
+    </tr>
     <% } %>
-    <form action="peserta/redirect" method="post">
-      <input
-        type="submit"
-        id="redirect-peserta"
-        value="redirect to instructor"
-      />
-    </form>
-  </body>
-</html>
+  </tbody>
+</table>
+<form action="peserta/redirect" method="post">
+  <div class="container my-3 bg-light">
+        <div class="col-md-12 text-center">
+            <input type="submit" class="btn btn-primary" value="Redirect To instructor"></input>
+    </div>
+  </button>
+</form>

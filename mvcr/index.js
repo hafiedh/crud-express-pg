@@ -4,6 +4,7 @@ const PORT = 7777;
 const routes = require("./routes");
 
 app.set("view engine", "ejs");
+app.use(express.static("views"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
