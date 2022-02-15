@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs'); %>
+
+  <body>
+    <h1>Hallo Admin</h1>
+    <table>
+      <thead>
+        <tr style="border: 1px solid black">
+          <th>Email</th>
+          <th>Role</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i = 0; i < data.length; i++) { %>
+        <tr style="border: 1px solid black">
+          <td><%= data[i].email %></td>
+          <td><%= data[i].role %></td>
+          <td>
+            <a href="/admin/<%= data[i].id %>/delete">Delete</a>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>
